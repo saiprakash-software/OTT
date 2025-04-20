@@ -86,6 +86,19 @@ WSGI_APPLICATION = 'youtube_clone.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+import os
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('Saiprakash12$youtube_db'),  
+        'USER': os.environ.get('Saiprakash12'), 
+        'PASSWORD': os.environ.get('Venkatesh@12'),
+        'HOST': os.environ.get('Saiprakash12.mysql.pythonanywhere-services.com'),
+        'PORT': os.environ.get('DB_PORT', '3306'),
+    }
+}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
