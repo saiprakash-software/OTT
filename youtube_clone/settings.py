@@ -98,13 +98,14 @@ WSGI_APPLICATION = 'youtube_clone.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bykghjm9x6vdugtitgzi',
-        'USER': 'ugcaago5shp9ov5y',
-        'PASSWORD': 'ugcaago5shp9ov5y',
-        'HOST': 'bykghjm9x6vdugtitgzi-mysql.services.clever-cloud.com',
-        'PORT': '20878',
+        'NAME': 'bykghjm9x6vdugtitgzi',  # The database name
+        'USER': 'ugcaago5shp9ov5y',  # The username
+        'PASSWORD': 'BusnaKLPVUpDS6FNE2h',  # The password
+        'HOST': 'bykghjm9x6vdugtitgzi-mysql.services.clever-cloud.com',  # Host from MYSQL_ADDON_HOST
+        'PORT': '20878',  # The port
     }
 }
+
 
 
 
