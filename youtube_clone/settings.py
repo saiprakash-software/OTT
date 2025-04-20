@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'youtube_clone.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('Saiprakash12$default'),  
+        'NAME': os.environ.get('Saiprakash12$youtube_db'),  
         'USER': os.environ.get('Saiprakash12'), 
         'PASSWORD': os.environ.get('Venkatesh@12'),
         'HOST': os.environ.get('Saiprakash12.mysql.pythonanywhere-services.com'),
