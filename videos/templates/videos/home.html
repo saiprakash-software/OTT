@@ -8,7 +8,11 @@
         <h2>Helloo, {{ user.username }} </h2>
     </div>
 {% endif %}
-
+<head>
+    
+    <link rel="stylesheet" href="{% static 'videos/style.css' %}">
+    
+</head>
 <form method="get" action="/" class="search-form">
     <input type="text" name="q" placeholder="Search videos..." value="{{ query|default:'' }}">
     <button type="submit">Search</button>
