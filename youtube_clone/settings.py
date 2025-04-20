@@ -105,6 +105,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Media files (for video uploads, etc.)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+# settings.py
+
+
+# Media settings for file uploads (thumbnails)
+MEDIA_URL = '/media/'  # URL to access uploaded files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Local directory where files are stored
+
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
