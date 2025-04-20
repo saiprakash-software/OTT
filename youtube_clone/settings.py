@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,12 +87,12 @@ WSGI_APPLICATION = 'youtube_clone.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-import os
+
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('Saiprakash12$youtube_db'),  
+        'NAME': os.environ.get('Saiprakash12$default'),  
         'USER': os.environ.get('Saiprakash12'), 
         'PASSWORD': os.environ.get('Venkatesh@12'),
         'HOST': os.environ.get('Saiprakash12.mysql.pythonanywhere-services.com'),
@@ -99,16 +100,7 @@ DATABASES = {
     }
 }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'youtube_db',
-        'USER': 'root',
-        'PASSWORD': 'Venkatesh@12',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
+
 
 
 
