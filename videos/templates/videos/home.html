@@ -1,0 +1,39 @@
+{% extends 'videos/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <div class="greeting-box">
+        <h2>Helloo, {{ user.username }} </h2>
+    </div>
+{% endif %}
+
+<form method="get" action="/" class="search-form">
+    <input type="text" name="q" placeholder="Search videos..." value="{{ query|default:'' }}">
+    <button type="submit">Search</button>
+</form>
+
+<h2>Latest Videos</h2>
+<div class="video-grid">
+    {% for video in videos %}
+        <div class="video-card">
+            <a href="{% url 'video_detail' video.pk %}">
+                {% if video.thumbnail and video.thumbnail.url %}
+                    <img src="{{ video.thumbnail.url }}" alt="Thumbnail">
+                {% else %}
+                    <img src="{% static 'images/default-thumbnail.jpg' %}" alt="No thumbnail">
+                {% endif %}
+                <p>{{ video.views }} views</p>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="bottom-section" style="margin-top: 40px; padding: 20px; background-color: #1e1e1e; color: #fff; text-align: center;">
+    <h3>Enjoy streaming your favorite content!</h3>
+    <p>More features like watchlists, comments, subscriptions, and user profiles coming soon.</p>
+    <p>&copy; 2025 My OTT Platform</p>
+</div>
+
+{% endblock %}
