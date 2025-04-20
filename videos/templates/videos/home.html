@@ -133,6 +133,19 @@ header nav a:hover {
     color: #fff;
     font-family: 'Segoe UI', sans-serif;
 }
+
+.marquee-msg {
+    
+    color: red;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 50%;
+}
+
+marquee {
+    font-family: 'Segoe UI', sans-serif;
+}
 </style>
 
 {% if user.is_authenticated %}
@@ -147,6 +160,9 @@ header nav a:hover {
 </form>
 
 <h2 style="text-align:center; margin-top: 20px;">Latest Videos</h2>
+<div class="marquee-msg">
+    <marquee behavior="scroll" direction="left">Any movie click plays a single teaser only  for practice to deploy </marquee>
+</div>
 <div class="video-grid">
     {% for video in videos %}
         <div class="video-card">
